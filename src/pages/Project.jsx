@@ -1,0 +1,146 @@
+// src/pages/Projects.jsx
+
+import React from "react";
+import {
+  SiPython,
+  SiPytorch,
+  SiTensorflow,
+  SiReact,
+  SiFlask,
+  SiMongodb,
+  SiMysql,
+  SiNumpy,
+  SiPandas,
+  SiJavascript,
+  SiNodedotjs,
+  SiDjango,
+  SiHtml5,
+  SiCss3,
+  SiGithub,
+  SiGooglecolab,
+  SiFastapi,
+  SiBootstrap,
+  SiScikitlearn
+} from "react-icons/si";
+
+import CircuitBackground from "../components/Background";
+import Footer from "../components/Footer";
+
+const projects = [
+  {
+    title: "AI Image Captioning using Flickr30k",
+    label: "ResNet | InceptionV3 | Transformer | LSTM",
+    icons: [
+      <SiPython key="py" />,
+      <SiPytorch key="pt" />,
+      <SiTensorflow key="tf" />,
+      <SiReact key="react" />,
+      <SiDjango key="django" />,
+    ],
+    description: "Developed an AI-powered image caption generator using the Flickr30k dataset with ResNet50+Transformer and InceptionV3+LSTM. Achieved competitive BLEU and CIDEr scores using PyTorch, TensorFlow, and Hugging Face.",
+  },
+  {
+    title: "Cloud Detection with MODIS Satellite Data",
+    label: "ML | NASA | ISRO",
+    icons: [
+      <SiPython key="py" />,
+      <SiPytorch key="pt" />,
+      <SiScikitlearn key="sk" />,
+      <SiGooglecolab key="colab" />,
+    ],
+    description: "Built machine learning models (Random Forest, Neural Network, LightGBM) for automated cloud detection on MODIS satellite imagery. Validated on INSAT-3D data, requiring zero human intervention.",
+  },
+  {
+    title: "Smart Text Prediction – Gujarati Sentence Completion",
+    label: "NLP",
+    icons: [
+      <SiPython key="py" />,
+      <SiTensorflow key="tf" />,
+      <SiNumpy key="np" />,
+      <SiPandas key="pd" />,
+    ],
+    description: "Created a language model for Gujarati sentence completion using Hidden Semi Markov Models and neural networks. Collected and preprocessed custom datasets to improve word prediction accuracy.",
+  },
+  {
+    title: "IC Chip Detection for Automated Inspection",
+    label: "Computer Vision | YOLOv5",
+    icons: [
+      <SiPython key="py" />,
+      <SiPytorch key="pt" />,
+    ],
+    description: "Designed an IC chip detection system using YOLOv5 with 90% accuracy. Leveraged image masking and custom datasets to optimize detection and classification.",
+  },
+  {
+    title: "Movie Recommendation System",
+    label: "Full Stack",
+    icons: [
+      <SiReact key="react" />,
+      <SiFlask key="flask" />,
+      <SiMysql key="mysql" />,
+      <SiPython key="py" />,
+      <SiJavascript key="js" />,
+    ],
+    description: "Revamped a personalized movie recommendation site using Flask, React, and MySQL. Integrated advanced algorithms, improved UI/UX, and boosted performance with optimized queries and caching.",
+  },
+  {
+    title: "On-Campus Job Portal",
+    label: "MERN Stack",
+    icons: [
+      <SiReact key="react" />,
+      <SiNodedotjs key="node" />,
+      <SiMongodb key="mongodb" />,
+      <SiJavascript key="js" />,
+    ],
+    description: "Developed a real-time job portal for students and recruiters with MERN stack. Features include real-time chat, dark mode, and seamless recruiter-student interaction.",
+  },
+  {
+    title: "SimplyClip – Cross-Browser Clipboard Extension",
+    label: "Browser Extension",
+    icons: [
+      <SiJavascript key="js" />,
+      <SiNodedotjs key="node" />,
+      <SiPython key="py" />,
+      <SiHtml5 key="html" />,
+      <SiCss3 key="css" />,
+    ],
+    description: "Built a cross-browser extension enabling a shared clipboard, with features like multi-text selection, summarization, sorting, and export for researchers and professionals.",
+  },
+];
+
+export default function Projects() {
+  return (
+    <section className="max-container">
+      <main className="relative min-h-screen pb-8">
+          <CircuitBackground />
+        <div className="relative z-10 w-full max-w-2xl mx-auto flex flex-col items-center px-4 pt-12 ">
+          {/* Heading */}
+          <h1 className="text-5xl md:text-6xl font-extrabold text-[#49e6fb] mb-12">Projects</h1>
+          {/* Project Cards */}
+          <div className="flex flex-col gap-8 ">
+            {projects.map((project, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col rounded-2xl shadow-xl bg-[#132026]/90 p-8 mb-2 hover:scale-[1.05]"
+              >
+                <div className="flex flex-row gap-4 items-center flex-wrap">
+                  <h2 className="text-2xl font-bold text-[#00c2dc] mb-1">{project.title}</h2>
+                </div>
+                <div>
+                  {project.label && (
+                    <div className="text-gray-200 text-base font-semibold mb-2">{project.label}</div>
+                  )}
+                </div>
+                <div className="text-gray-300 text-base mt-2">{project.description}</div>
+                {/* Icons at bottom */}
+                <div className="flex flex-wrap gap-4 items-center mt-6 text-2xl text-[#ffd7a2]">
+                  {project.icons}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
+    <Footer/>
+    </section>
+  );
+}
