@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CircuitBackground from '../components/Background';
 
-const profilePic = "/pic.jpeg"; // Replace with your own photo URL
+const profilePic = "/profile.jpg"; // Replace with your own photo URL
 
 const NAV_LINKS = [
   { label: "About", href: "/about" },
