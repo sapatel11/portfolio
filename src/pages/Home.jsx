@@ -25,7 +25,7 @@ export default function Home() {
       {/* --- Centered Card --- */}
       <div
         id="homecard"
-        className="relative z-10 max-w-10/12 lg:max-w-4xl rounded-3xl bg-[#132026]/90 shadow-2xl backdrop-blur-lg px-5 sm:px-6 md:px-20 py-6 md:py-8 flex flex-col items-center"
+        className="relative z-10 max-w-10/12 lg:max-w-4xl rounded-3xl bg-[#132026]/75 shadow-2xl backdrop-blur-xs px-5 sm:px-6 md:px-20 py-6 md:py-8 flex flex-col items-center"
       >
 
         {/* Main Content */}
