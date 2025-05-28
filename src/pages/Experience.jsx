@@ -58,7 +58,7 @@ export default function Experiences() {
           {experiences.map((exp, i) => (
             <div
               key={i}
-              className={`flex flex-col items-center rounded-2xl shadow-xl ${exp.color} p-7 mb-2 transition transform hover:scale-[1.05]`}
+              className={`flex flex-col items-center rounded-2xl shadow-xl bg-[#132026]/90 p-7 mb-2 transition transform hover:scale-[1.05]`}
             >
               <div>
                 <h2 className="text-2xl font-bold text-[#00c2dc] mb-2">{exp.title}</h2>
