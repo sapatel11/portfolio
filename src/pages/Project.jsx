@@ -24,7 +24,6 @@ import {
 } from "react-icons/si";
 
 import CircuitBackground from "../components/Background";
-import Footer from "../components/Footer";
 
 const projects = [
   {
@@ -38,17 +37,6 @@ const projects = [
       <SiDjango key="django" />,
     ],
     description: "Developed an AI-powered image caption generator using the Flickr30k dataset with ResNet50+Transformer and InceptionV3+LSTM. Achieved competitive BLEU and CIDEr scores using PyTorch, TensorFlow, and Hugging Face.",
-  },
-  {
-    title: "Cloud Detection with MODIS Satellite Data",
-    label: "ML | NASA | ISRO",
-    icons: [
-      <SiPython key="py" />,
-      <SiPytorch key="pt" />,
-      <SiScikitlearn key="sk" />,
-      <SiGooglecolab key="colab" />,
-    ],
-    description: "Built machine learning models (Random Forest, Neural Network, LightGBM) for automated cloud detection on MODIS satellite imagery. Validated on INSAT-3D data, requiring zero human intervention.",
   },
   {
     title: "Smart Text Prediction – Gujarati Sentence Completion",
@@ -112,7 +100,7 @@ export default function Projects() {
     <section className="max-container">
       <main className="relative min-h-screen pb-8">
           <CircuitBackground />
-        <div className="relative z-10 w-full max-w-2xl mx-auto flex flex-col items-center px-4 pt-12 ">
+        <div className="relative z-10 flex flex-col items-center w-full max-w-2xl px-4 pt-6 mx-auto ">
           {/* Heading */}
           <h1 className="text-5xl md:text-6xl font-extrabold text-[#49e6fb] mb-12">Projects</h1>
           {/* Project Cards */}
@@ -122,15 +110,15 @@ export default function Projects() {
                 key={idx}
                 className="flex flex-col rounded-2xl shadow-xl bg-[#132026]/90 p-8 mb-2 hover:scale-[1.05]"
               >
-                <div className="flex flex-row gap-4 items-center flex-wrap">
+                <div className="flex flex-row flex-wrap items-center gap-4">
                   <h2 className="text-2xl font-bold text-[#00c2dc] mb-1">{project.title}</h2>
                 </div>
                 <div>
                   {project.label && (
-                    <div className="text-gray-200 text-base font-semibold mb-2">{project.label}</div>
+                    <div className="mb-2 text-base font-semibold text-gray-200">{project.label}</div>
                   )}
                 </div>
-                <div className="text-gray-300 text-base mt-2">{project.description}</div>
+                <div className="mt-2 text-base text-gray-300">{project.description}</div>
                 {/* Icons at bottom */}
                 <div className="flex flex-wrap gap-4 items-center mt-6 text-2xl text-[#ffd7a2]">
                   {project.icons}
@@ -140,7 +128,6 @@ export default function Projects() {
           </div>
         </div>
       </main>
-    <Footer/>
     </section>
   );
 }

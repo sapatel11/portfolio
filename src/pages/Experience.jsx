@@ -2,7 +2,6 @@
 
 import React,{useState} from "react";
 import CircuitBackground from '../components/Background';
-import Footer from "../components/Footer";
 import { AiFillLinkedin, AiFillGithub, AiOutlinePhone, AiFillMail } from "react-icons/ai";
 
 
@@ -29,7 +28,6 @@ const experiences = [
 ];
 
 export default function Experiences() {
-    const [dark, setDark] = useState(true);
     
   return (
     <div>
@@ -37,10 +35,10 @@ export default function Experiences() {
       
         <CircuitBackground />
       {/* Content */}
-      <div className="relative py-30 z-10 w-full max-w-2xl mx-auto">
+      <div className="relative z-10 w-full max-w-2xl px-4 py-6 mx-auto">
         {/* Heading */}
-        <div className="flex items-center justify-between mb-10">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-[#49e6fb]">Experiences</h1>
+        <div className="flex items-center justify-center mb-10">
+          <h1 className="md:text-6xl font-extrabold text-[#49e6fb]">Experiences</h1>
           {/* Theme toggle placeholder */}
           {/* <button
               aria-label="Toggle dark mode"
@@ -60,18 +58,15 @@ export default function Experiences() {
           {experiences.map((exp, i) => (
             <div
               key={i}
-              className={`flex items-center rounded-2xl shadow-xl ${exp.color} p-7 mb-2 transition transform hover:scale-[1.05]`}
+              className={`flex flex-col items-center rounded-2xl shadow-xl ${exp.color} p-7 mb-2 transition transform hover:scale-[1.05]`}
             >
-              <div className="flex-shrink-0 mr-7">
-                {exp.icon}
-              </div>
               <div>
                 <h2 className="text-2xl font-bold text-[#00c2dc] mb-2">{exp.title}</h2>
-                <div className="text-gray-200 text-lg font-medium mb-1">{exp.company}</div>
-                <div className="text-gray-300 text-base">{exp.date}</div>
-                <div className="text-gray-400 text-base">{exp.location}</div>
+                <div className="mb-1 text-lg font-medium text-gray-200">{exp.company}</div>
+                <div className="text-base text-gray-300">{exp.date}</div>
+                <div className="text-base text-gray-400">{exp.location}</div>
                 {exp.summary && (
-                  <div className="text-gray-300 text-base mt-2">{exp.summary}</div>
+                  <div className="mt-2 text-base text-gray-300">{exp.summary}</div>
                 )}
               </div>
             </div>
@@ -79,47 +74,6 @@ export default function Experiences() {
         </div>
       </div>
     </main>
-    <footer className="absolute w-full bg-[#121c28]/90 py-5 visible">
-          <div id="footer" className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 px-4">
-            <div className="text-center md:text-left text-base">
-              © {new Date().getFullYear()} Shail Patel. All rights reserved.
-            </div>
-            <div className="flex gap-6 text-2xl footer-icons">
-              <a
-                href="https://www.linkedin.com/in/shail-p11"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="transition"
-              >
-                <AiFillLinkedin />
-              </a>
-              <a
-                href="https://github.com/sapatel11"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className=" transition"
-              >
-                <AiFillGithub />
-              </a>
-              <a
-                href="tel:+19195205547"
-                aria-label="Phone"
-                className="transition"
-              >
-                <AiOutlinePhone />
-              </a>
-              <a
-                href="mailto:sapatel122002@gmail.com"
-                aria-label="Email"
-                className="transition"
-              >
-                <AiFillMail />
-              </a>
-            </div>
-          </div>
-        </footer>
     </div>
   );
 }
