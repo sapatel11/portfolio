@@ -94,11 +94,11 @@ export default function About() {
           <div className="rounded-2xl bg-[#0f2737] bg-opacity-90 shadow-lg p-8">
             <h2 className="text-2xl font-bold text-[#49e6fb] mb-3">Certifications</h2>
             <ul className="pl-5 text-gray-200 list-disc certification-list">
-              <li className="underline"><a href="https://www.coursera.org/account/accomplishments/verify/L9DXY5DPOXT8" target="_blank" rel="noopener noreferrer" className="break-all">Supervised Machine Learning: Regression and Classification (Coursera, DeepLearning.AI)</a></li>
-              <li className="underline"><a href="https://learn.nvidia.com/certificates?id" target="_blank" rel="noopener noreferrer" className="break-all">Getting Started with Deep Learning (NVIDIA)</a></li>
-              <li className="underline"><a href="https://www.coursera.org/account/accomplishments/records/TW2ZMBASBEJX" target="_blank" rel="noopener noreferrer" className="break-all">Unsupervised Learning, Recommenders, Reinforcement Learning (Coursera, DeepLearning.AI & Stanford University)</a></li>
-              <li className="underline"><a href="https://www.coursera.org/account/accomplishments/verify/BUZ1OPQMBIHM" target="_blank" rel="noopener noreferrer" className="break-all">Advanced Learning Algorithms (Coursera, DeepLearning.AI)</a></li>
-              <li className="underline"><a href="https://www.coursera.org/account/accomplishments/specialization/24HBB6XCGWFC" target="_blank" rel="noopener noreferrer" className="break-all">Machine Learning Specialization (Coursera, Stanford University)</a></li>
+              <li className="underline"><a href="https://www.coursera.org/account/accomplishments/verify/L9DXY5DPOXT8" target="_blank" rel="noopener noreferrer" >Supervised Machine Learning: Regression and Classification (Coursera, DeepLearning.AI)</a><p><br /></p></li>
+              <li className="underline"><a href="https://learn.nvidia.com/certificates?id" target="_blank" rel="noopener noreferrer" >Getting Started with Deep Learning (NVIDIA)</a><p><br /></p></li>
+              <li className="underline"><a href="https://www.coursera.org/account/accomplishments/records/TW2ZMBASBEJX" target="_blank" rel="noopener noreferrer" >Unsupervised Learning, Recommenders, Reinforcement Learning (Coursera, DeepLearning.AI & Stanford University)</a><p><br /></p></li>
+              <li className="underline"><a href="https://www.coursera.org/account/accomplishments/verify/BUZ1OPQMBIHM" target="_blank" rel="noopener noreferrer" >Advanced Learning Algorithms (Coursera, DeepLearning.AI)</a><p><br /></p></li>
+              <li className="underline"><a href="https://www.coursera.org/account/accomplishments/specialization/24HBB6XCGWFC" target="_blank" rel="noopener noreferrer">Machine Learning Specialization (Coursera, Stanford University)</a><p><br /></p></li>
             </ul>
           </div>
         </div>
